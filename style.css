@@ -16,11 +16,20 @@ h1 {
   text-transform: uppercase;
 }
 
+.animate__infinite {
+  animation-delay: 4s;
+}
+
 hr {
   border-color: #ff642b;
   border-width: 3px;
   max-width: 65px;
 
+}
+
+img {
+  border: 10px;
+  border-color: hotpink;
 }
 
 .buffer {
