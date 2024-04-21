@@ -57,25 +57,47 @@ isDeleteAll.addEventListener("click", clearUl)
 
 var color1 = document.getElementById("color1");
 var color2 = document.getElementById("color2");
-var body = document.getElementById("gradient")
+var body = document.getElementById("gradient");
+var h3 = document.getElementById("h3");
+var randomButton = document.getElementById("random");
 
-color1.addEventListener("input", function() {
+function updateH3() {
+    h3.innerHTML = "Farbe 1: " + color1.value + "; Farbe 2: " + color2.value + "; CSS: background: linear-gradient(to right, "
+    + color1.value
+    + ", "
+    + color2.value
+    + ")";
+}
+
+function setGradient() {
     body.style.background = 
     "linear-gradient(to right, "
     + color1.value
     + ", "
     + color2.value
     + ")";
-    }
-)
+    updateH3();
+}
 
+color1.addEventListener("input", setGradient)
+color2.addEventListener("input", setGradient)
 
-color2.addEventListener("input", function() {
-    body.style.background = 
+var randColor = () =>  {
+    return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+}
+
+function randomize() {
+    color1.value = randColor()
+    color2.value = randColor()
+    body.style.background =
     "linear-gradient(to right, "
     + color1.value
     + ", "
     + color2.value
     + ")";
-    }
-)
+    updateH3();
+}
+
+randomButton.addEventListener("click", randomize);
+
+//randomize()
