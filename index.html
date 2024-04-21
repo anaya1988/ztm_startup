@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Startup</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  </head>
-  <body>
-  <div class="container d-flex align-items-center h-100">
-    <div class="row">
-      <header class="text-center col-12">
-        <h1 class="animate__animated animate__shakeY animate__infinite"><strong>The biggest fucking event of the year</strong></h1>
-      </header>
-      <div class="buffer col-12"></div>
-      <section class="text-center col-12">
-        <hr>
-        <button type="button" class="btn btn-primary btn-xl">go fuck yourself</button>
-        <div class="text-center">
-          <div class="buffer col-12"></div>
-          <img class="img-fluid animate__animated animate__shakeY animate__infinite" src="dong.png" width="120px" height="150px">
-      </div>
-      </section>
-    </div>
-    <div> 
-      
-    </div>
-  </div>
-
-  <script type="text/javascript" src="script.js">    
-  </script>
-
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM - To Do</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<h1>Hüdis To Do Liste</h1>
+	<div class="addItem">
+		<input id="userInput" type="text" placeholder="neue Aufgabe">
+		<button id="enter" class="enter">hinzufügen</button>
+	</div>
+	<section id="list">
+		<ul id="ul">Meine Aufgaben
+		</ul>
+	</section>
+	<button id="deleteAll" class="deleteAll">alle löschen</button>
+	<script type="text/javascript" src="script.js"></script>
+</body>
 </html>
-
-
