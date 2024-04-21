@@ -82,8 +82,22 @@ function setGradient() {
 color1.addEventListener("input", setGradient)
 color2.addEventListener("input", setGradient)
 
+//var randColor und getBrightness(hexColor) sind von ChatGPT
 var randColor = () =>  {
-    return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+    var color;
+    do {
+        color = "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+    } while (getBrightness(color) < 128); // Überprüfen der Helligkeit, bis eine ausreichend helle Farbe gefunden wird
+    return color;
+}
+
+function getBrightness(hexColor) {
+    // Extrahieren von RGB-Werten
+    var r = parseInt(hexColor.substr(1, 2), 16);
+    var g = parseInt(hexColor.substr(3, 2), 16);
+    var b = parseInt(hexColor.substr(5, 2), 16);
+    // Berechnen der Helligkeit nach der Formel: (0.299*R + 0.587*G + 0.114*B)
+    return (0.299 * r + 0.587 * g + 0.114 * b);
 }
 
 function randomize() {
