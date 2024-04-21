@@ -16,7 +16,7 @@ function createListElement() {
         var buttonNeu = document.createElement("button");
         buttonNeu.id = "button" + idNo;
         idNo++;
-        buttonNeu.appendChild(document.createTextNode("erledigt"));
+        buttonNeu.appendChild(document.createTextNode("löschen"));
         li.appendChild(buttonNeu);
         li.appendChild(document.createTextNode(input.value));
         ul.appendChild(li);
