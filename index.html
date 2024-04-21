@@ -6,8 +6,8 @@
 	<title>DOM - To Do</title>
 	<link href="style.css" rel="stylesheet">
 </head>
-<body>
-	<h1>To Do</h1>
+<body id="gradient">
+	<h1>TO DO</h1>
 	<div class="addItem">
 		<input id="userInput" type="text" placeholder="neue Aufgabe">
 		<button id="enter" class="enter">hinzufügen</button>
@@ -17,6 +17,11 @@
 		</ul>
 	</section>
 	<button id="deleteAll" class="deleteAll">alle löschen</button>
+	<div class="bgGenerator">
+		<p>Hintergrund anpassen</p>
+		<input type="color" class="colorInput" id="color1" value="#ddffdd">
+		<input type="color" class="colorInput" id="color2" value="#ddffdd">
+	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
